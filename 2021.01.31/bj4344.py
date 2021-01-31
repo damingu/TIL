@@ -11,4 +11,4 @@ for i in range(T):
             cnt += 1
     #학생들 비율 구하기
     # 소수점 0도 출력할 수 있도록 조정
-    print('{0: .3f}%' .format(cnt/scr[0] * 100))
+    print(str('%.3f' % round(cnt/scr[0] * 100, 3)) + '%')
