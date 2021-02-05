@@ -10,15 +10,16 @@ for i in range(len(word)):
     elif ord(word[i]) >=65 :
         alpa[ord(word[i]) - 65] += 1
 # 가장 많이 사용되는 알파벳 찾기
-maxN = 0
+maxN = max(alpa)
+cnt = 0
 idx = 9999
 many = False
 for i in range(26):
-    if alpa[i] > maxN :
-        maxN = alpa[i]
+    if alpa[i] == maxN :
+        cnt += 1
         idx = i
     # 가장많이 사용된 알파벳이 여러개일 경우
-    elif alpa[i] == maxN :
+    if cnt >= 2 :
         many = True
         break
 # 가장 많이 사용된 알파벳 대문자 출력
